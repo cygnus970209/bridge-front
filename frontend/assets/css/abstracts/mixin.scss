@@ -1,0 +1,154 @@
+@mixin mobile {
+    @media (min-width: $breakpoint-mobile) {
+        @content;
+    }
+}
+@mixin foldable {
+    @media (min-width: #{$breakpoint-foldable + 1px}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$breakpoint-tablet + 1px}) {
+        @content;
+    }
+}
+
+/* ellipsis */
+@mixin ellipsis($line){
+    @if($line == 1) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    }
+    @if($line > 1) {
+        overflow: hidden;
+        white-space: normal;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+        word-break: keep-all; 
+    }
+}
+
+/* shape */
+@mixin circle($val) {
+    width: $val;
+    height: $val;
+    border-radius: $radius-circle;
+}
+
+/* flex */
+@mixin flex($dir ,$align, $justify) {
+    display: flex;
+
+    // dir
+    @if($dir == row){
+        flex-direction: row;
+    }
+    @if($dir == column){
+        flex-direction: column;
+    }
+
+    // align
+    @if($align == start){
+        align-items: flex-start;
+    }
+    @if($align == center){
+        align-items: center;
+    }
+    @if($align == end){
+        align-items: flex-end;
+    }     
+    @if($align == stretch) {
+        align-items: stretch;
+    }
+
+    // justify
+    @if($justify == between){
+        justify-content: space-between;
+    }
+    @if($justify == center){
+        justify-content: center;
+    }
+    @if($justify == start){
+        justify-content: flex-start;
+    }
+    @if($justify == end){
+        justify-content: flex-end;
+    }
+}
+
+/* position */
+@mixin relative($type) {
+    position: relative;
+    
+    @if($type == normal) {
+        top: 0;
+        left: 0;
+    }
+    @if($type == center) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@mixin absolute($type) {
+    position: absolute;
+
+    @if($type == center) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @if($type == x-center) {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    } 
+    @if($type == y-center) {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    } 
+}
+@mixin fixed-top() {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin fixed-bottom() {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin fixed-center() {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin sticky-top() {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+@mixin sticky-bottom() {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+
+/* background */
+@mixin bg-center($url, $width, $height) {
+    background: url($url) center / 100% no-repeat;
+    font-size: 0; // 텍스트로 어떤 이미지인지 정의 후 숨김처리
+
+    @if($width) {
+        background-size: $width $height;
+    }
+}

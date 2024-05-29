@@ -1,0 +1,84 @@
+/* screen */
+$breakpoint-mobile: 320px;
+$breakpoint-foldable: 480px;
+$breakpoint-tablet: 640px;
+$max-width: 768px;
+
+/* color */
+$primary90: #351b6a;
+$primary80: #50289f;
+$primary70: #6c3bce;
+$primary60: #9370db;
+$primary50: #a98de2;
+$primary40: #bfa9ea;
+$primary30: #d4c6f1;
+$primary20: #eae2f8;
+$primary10: #f4f1fb;
+
+$secondary90: #142c6f;
+$secondary80: #1d42a6;
+$secondary70: #2b5ada;
+$secondary60: #6284e3;
+$secondary50: #829ee9;
+$secondary40: #a1b6ee;
+$secondary30: #c1cef4;
+$secondary20: #e0e7f9;
+$secondary10: #eff3fc;
+
+$base90: #000000;
+$base80: #202122;
+$base70: #54595d;
+$base60: #72777d;
+$base50: #a2a9b1;
+$base40: #c8ccd1;
+$base30: #eaecf0;
+$base20: #f8f9fa;
+$base10: #ffffff;
+
+$success80: #14866d;
+$success60: #00af89;
+$success30: #d5fdf4;
+
+$warning80: #ac6600;
+$warning60: #ffcc33;
+$warning30: #fef6e7;
+
+$error80: #b32424;
+$error60: #dd3333;
+$error30: #fee7e6;
+
+$gradation-primary: linear-gradient(0.25turn, $primary60, $secondary60);
+$bg-modal: rgba(0, 0, 0, 0.7);
+
+/* gap */
+$base-pd: 3.375rem;
+
+/* radius */
+$radius-circle: 50%;
+$radius-full: 31.25rem;
+$radius-lg: 1.875rem;
+$radius-sm: 1.25rem;
+$radius-xs: 0.625rem;
+
+/* font-size */
+$title-lg: 2rem;
+$title-md: 1.5rem;
+$text-md: 1.25rem;
+$text-sm: 1rem;
+$text-xs: 0.875rem;
+$text-xxs: 0.6875rem;
+
+/* font-weight */
+$font-normal: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+/* z-index */
+$header-z: 9;
+$buttom-z: 9;
+$tab-z: 9;
+$modal-z: 99;
+
+/* shadow */
+$base-shadow: 0 1.25rem 0 0 rgba(0, 0, 0, 0.08);
+$text-shadow: 0 0.625rem 0 0 rgba(0, 0, 0, 0.3);
