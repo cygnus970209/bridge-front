@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   alias: {
-    '@': fileURLToPath(new URL('./src/', import.meta.url)),
+    '@': fileURLToPath(new URL('./assets/', import.meta.url)),
     '~': fileURLToPath(new URL('./', import.meta.url)),
   },
   components: {
@@ -29,9 +29,19 @@ export default defineNuxtConfig({
       },
     ],
   },
-  css: ['@/assets/css/main.scss'],
+  // vite: {
+  //   css: {
+  //     preprocessorOptions: {
+  //       scss: {
+  //         additionalData: "@import '@/css/main.scss';",
+  //         // additionalData:
+  //         //   "@import '@/css/abstracts/variables.scss'; @import '@/css/abstracts/mixin.scss'; @import '@/css/base/reset.scss'; @import '@/css/base/base.scss';",
+  //       },
+  //     },
+  //   },
+  // },
+  // css: ['@/css/main.scss'],
   buildDir: 'dist',
-  srcDir: 'src/',
   sourcemap: {
     server: true,
     client: false,
