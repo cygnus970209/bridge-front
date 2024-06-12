@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { fileURLToPath } from 'url';
-
 export default defineNuxtConfig({
   ssr: true,
   app: {
@@ -15,11 +13,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  devtools: { enabled: true },
-  alias: {
-    '@': fileURLToPath(new URL('./assets/', import.meta.url)),
-    '~': fileURLToPath(new URL('./', import.meta.url)),
-  },
+  devtools: { enabled: false },
   components: {
     dirs: [
       {
@@ -29,21 +23,14 @@ export default defineNuxtConfig({
       },
     ],
   },
-  // vite: {
-  //   css: {
-  //     preprocessorOptions: {
-  //       scss: {
-  //         additionalData: "@import '@/css/main.scss';",
-  //         // additionalData:
-  //         //   "@import '@/css/abstracts/variables.scss'; @import '@/css/abstracts/mixin.scss'; @import '@/css/base/reset.scss'; @import '@/css/base/base.scss';",
-  //       },
-  //     },
-  //   },
-  // },
-  // css: ['@/css/main.scss'],
-  buildDir: 'dist',
-  sourcemap: {
-    server: true,
-    client: false,
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "assets/css/abstracts/variables" as *; @import "assets/css/abstracts/mixin";`,
+        },
+      },
+    },
   },
+  css: ['@/assets/css/main.scss'],
 });

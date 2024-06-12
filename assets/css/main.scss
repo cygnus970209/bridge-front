@@ -1,4 +1,10 @@
-@import '~/abstracts/variables.scss';
-@import '~/abstracts/mixin.scss';
-@import '~/base/reset.scss';
-@import '~/base/base.scss';
+/* base */
+@import '~/assets/css/base/typography';
+@import '~/assets/css/base/reset';
+@import '~/assets/css/base/base';
+
+/* component */
+@import '~/assets/css/components/atom/button';
+// @import '~/assets/css/components/atom/input';
+// @import '~/assets/css/components/atom/loading';
+// @import '~/assets/css/components/atom/nullData';
