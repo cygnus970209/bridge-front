@@ -1,6 +1,6 @@
 /* grid */
 .sticky {
-  background-color: $white00;
+  background-color: $base10;
 
   &-top {
     @include sticky-top;
@@ -11,7 +11,7 @@
 }
 
 .fixed {
-  background-color: $white00;
+  background-color: $base10;
 
   &-top {
     @include fixed-top;
@@ -46,7 +46,7 @@
 
     .btn--text {
       margin-bottom: 3.125rem;
-      text-decoration-color: $gray80;
+      text-decoration-color: $base80;
     }
   }
 }
@@ -56,7 +56,7 @@
   &__box {
     @include flex(row, center, center);
     border-radius: $radius-circle;
-    background-color: $white00;
+    background-color: $base10;
     overflow: hidden;
   }
   &__img {
@@ -71,9 +71,21 @@
   display: block;
   width: 100%;
   height: 1.25rem;
-  background-color: $white90;
 
   &--sm {
     height: 0.625rem;
+  }
+}
+
+.section {
+  @include flex(column, start, between);
+  height: 100vh;
+  padding: 4.25rem 3rem 0;
+
+  &__title {
+    margin-bottom: 4.25rem;
+    font-size: 3rem;
+    font-weight: $font-bold;
+    font-family: 'NanumSquareNeo';
   }
 }

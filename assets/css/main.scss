@@ -2,9 +2,10 @@
 @import '~/assets/css/base/typography';
 @import '~/assets/css/base/reset';
 @import '~/assets/css/base/base';
+@import '~/assets/css/base/global';
 
 /* component */
 @import '~/assets/css/components/atom/button';
-// @import '~/assets/css/components/atom/input';
+@import '~/assets/css/components/moecule/input';
 // @import '~/assets/css/components/atom/loading';
 // @import '~/assets/css/components/atom/nullData';

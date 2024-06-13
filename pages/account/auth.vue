@@ -3,13 +3,12 @@
         <div class="section__top">
             <h2 class="section__title">title</h2>
             <div class="input__container">
-                <MoeculeBaseInput type="email"></MoeculeBaseInput>
-                <MoeculeBaseInput type="password"></MoeculeBaseInput>
+                <MoeculeBaseInput type="tel"></MoeculeBaseInput>
+                <MoeculeBaseInput type="number"></MoeculeBaseInput>
             </div>
         </div>
         <div class="btn__container btn__container--column">
-            <AtomBaseButton btnText="회원가입하기"></AtomBaseButton>
-            <MoeculeOneButton btnText="로그인하기"></MoeculeOneButton>
+            <MoeculeOneButton btnText="다음"></MoeculeOneButton>
         </div>
     </section>
 </template>

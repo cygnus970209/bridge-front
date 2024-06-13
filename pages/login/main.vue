@@ -1,7 +1,7 @@
 <template>
     <section class="login">
         <h2 class="login__title">우리를<br>연결시키는<br>여정의 시작-</h2>
-        <div class="btn__container">
+        <div class="btn__container btn__container--column">
             <MoeculeOneButton :icon-src="icKakao" btnText="카카오로 시작하기"></MoeculeOneButton>
             <MoeculeOneButton :icon-src="icGoogle" btnText="Google로 시작하기"></MoeculeOneButton>
             <MoeculeOneButton :icon-src="icApple" btnText="Apple로 시작하기"></MoeculeOneButton>
