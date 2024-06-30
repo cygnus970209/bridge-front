@@ -5,7 +5,7 @@
             <MoeculeOneButton :icon-src="icKakao" btnText="카카오로 시작하기"></MoeculeOneButton>
             <MoeculeOneButton :icon-src="icGoogle" btnText="Google로 시작하기"></MoeculeOneButton>
             <MoeculeOneButton :icon-src="icApple" btnText="Apple로 시작하기"></MoeculeOneButton>
-            <MoeculeOneButton :icon-src="icEmail" btnText="이메일로 시작하기"></MoeculeOneButton>
+            <MoeculeOneButton :icon-src="icEmail" btnText="이메일로 시작하기" @click="goEmailLogin"></MoeculeOneButton>
             <AtomBaseButton btnText="도움이 필요하세요?"></AtomBaseButton>
         </div>
     </section>
@@ -17,4 +17,8 @@ import icKakao from '~/assets/images/ic_kakao.png';
 import icGoogle from '~/assets/images/ic_google.png';
 import icApple from '~/assets/images/ic_apple.png';
 import icEmail from '~/assets/images/ic_email.png';
+
+const goEmailLogin = () => {
+    navigateTo({ path: '/login/email' });
+}
 </script>
