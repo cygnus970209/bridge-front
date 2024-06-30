@@ -5,7 +5,7 @@
             <p class="notice"></p>
             <p class="notice"></p>
         </div>
-        <div class="btn__container btn__container--column">
+        <div class="section__bottom">
             <MoeculeOneButton btnText="다음"></MoeculeOneButton>
         </div>
     </section>
