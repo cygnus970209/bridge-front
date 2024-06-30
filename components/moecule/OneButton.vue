@@ -5,7 +5,7 @@
 	</div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps({
@@ -18,7 +18,6 @@ const props = defineProps({
 	},
 });
 
-// 이벤트 정의
 const emit = defineEmits(['click']);
 const click = () => {
 	emit('click');

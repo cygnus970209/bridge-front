@@ -17,7 +17,6 @@ const props = defineProps({
 	btnText: [String, Number]
 });
 
-// 이벤트 정의
 const emit = defineEmits(['click']);
 const click = () => {
 	emit('click');

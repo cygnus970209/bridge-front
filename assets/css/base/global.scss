@@ -80,15 +80,37 @@
 .section {
   @include flex(column, start, between);
   height: 100vh;
-  padding: 2.125rem 1.5rem 0;
+  padding: 2.125rem 0 0;
 
   &__top {
     width: 100%;
+    padding: 0 1.5rem 0;
   }
   &__title {
     margin-bottom: 2.125rem;
     font-size: 1.5rem;
     font-weight: $font-bold;
     font-family: 'NanumSquareNeo';
+  }
+  &__img {
+    width: 10rem;
+  }
+  &__center {
+    @include flex(column, center, center);
+    width: 100%;
+    height: 100%;
+
+    .section__inner {
+      @include flex(column, center, center);
+      text-align: center;
+    }
+    .section__title {
+      margin-bottom: 3.75rem;
+      line-height: 1.5;
+    }
+  }
+  &__bottom {
+    width: 100%;
+    padding: 2rem 1.5rem 2.5rem;
   }
 }
