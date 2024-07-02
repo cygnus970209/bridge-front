@@ -4,10 +4,10 @@
             <h2 class="section__title">인증번호 요청</h2>
             <div class="input__container">
                 <MoeculeBaseInput type="email" :value="userEmail" placeholder="이메일을 입력해주세요." @input="updateUserEmail"
-                    :btnText="isComplateEmail ? '재전송' : '전송'">
+                    :btnText="isComplateEmail ? '재전송' : '전송'" :is-disabled-btn="!isComplateEmail">
                 </MoeculeBaseInput>
-                <MoeculeBaseInput type="number" :value="authCode" placeholder="6자리를 입력해주세요." @input="updateAuthCode"
-                    btnText="3:00" :isDisabledBtn="true">
+                <MoeculeBaseInput v-if="isComplateEmail" type="number" :value="authCode" placeholder="6자리를 입력해주세요."
+                    @input="updateAuthCode" btnText="3:00" :is-disabled-btn="true">
                 </MoeculeBaseInput>
             </div>
         </div>
@@ -19,9 +19,10 @@
 
 <script setup>
 import { ref } from 'vue';
+// import { emailValidation } from '~/assets/js/validation';
 
 const isComplateEmail = ref(false);
-const isComplateCode = ref(true);
+const isComplateCode = ref(false);
 const userEmail = ref('');
 const authCode = ref(null);
 
@@ -34,4 +35,15 @@ const updateAuthCode = (code) => {
 const goNext = () => {
     navigateTo({ path: '/account/nickname' });
 }
+
+watch(userEmail, (newVal) => {
+    if (emailValidation(newVal)) {
+        isComplateEmail.value = true;
+    }
+});
+watch(authCode, (newVal) => {
+    if (code && code.length === 6) {
+        isComplateEmail.value = true;
+    }
+});
 </script>
