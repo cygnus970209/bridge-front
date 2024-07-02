@@ -1,0 +1,60 @@
+.login {
+  @include flex(column, center, center);
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: url(~/assets/images/img_login_bg.png) center / cover no-repeat;
+
+  &__inner {
+    width: 100%;
+    padding: 2.25rem 1.5rem 2.5rem;
+  }
+  &__title {
+    padding: 0 1.25rem;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'NanumSquareNeo', sans-serif;
+    line-height: 1.5;
+    color: $base10;
+  }
+  .btn {
+    margin-bottom: 0.75rem;
+    &__container {
+      @include flex(column, center, center);
+      padding-top: 2.25rem;
+    }
+    &--full {
+      .btn__item {
+        padding: 0 2.375rem 0 1.25rem;
+      }
+      .btn__text {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    &--kakao {
+      .btn__item {
+        background: none;
+        background-color: #f7d500;
+        color: $base80;
+      }
+    }
+    &--google {
+      .btn__item {
+        background: none;
+        background-color: $base10;
+        color: $base80;
+      }
+    }
+    &--apple {
+      .btn__item {
+        background: none;
+        background-color: $base80;
+        color: $base10;
+      }
+    }
+    &--text {
+      color: $base10;
+    }
+  }
+}
